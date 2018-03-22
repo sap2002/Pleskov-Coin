@@ -1,0 +1,9 @@
+Building Pleskov
+
+See doc/readme-qt.rst for instructions on building Pleskov QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Pleskov.
+
+See doc/build-*.txt for instructions on building Pleskovd,
+the intended-for-services, no-graphical-interface, reference
+implementation of Pleskov.

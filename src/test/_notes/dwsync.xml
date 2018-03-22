@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="accounting_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="allocator_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="base32_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="base58_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="base64_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="bignum_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="Checkpoints_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="getarg_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="hmac_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="key_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="mruset_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="netbase_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="README" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="serialize_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="sigopcount_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="uint160_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="uint256_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+<file name="wallet_tests.cpp" server="192.168.88.16//usr/local/www/apache22/data/" local="131661917090000000" remote="131661826800000000" />
+</dwsync>
