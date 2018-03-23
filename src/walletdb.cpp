@@ -368,7 +368,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
         {
             string strAddress;
             ssKey >> strAddress;
-            ssValue >> pwallet->mapAddressBook[CApolloncoinAddress(strAddress).Get()];
+            ssValue >> pwallet->mapAddressBook[CPleskovcoinAddress(strAddress).Get()];
         }
         else if (strType == "tx")
         {
@@ -738,7 +738,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("Apollon-wallet");
+    RenameThread("Pleskov-wallet");
 
     static bool fOneThread;
     if (fOneThread)

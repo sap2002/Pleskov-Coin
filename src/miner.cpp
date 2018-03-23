@@ -528,7 +528,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("Apollon-miner");
+    RenameThread("Pleskov-miner");
 
     CReserveKey reservekey(pwallet);
 

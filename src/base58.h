@@ -92,23 +92,23 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded Apollon addresses.
+/** base58-encoded Pleskov addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CApolloncoinAddress : public CBase58Data {
+class CPleskovcoinAddress : public CBase58Data {
 public:
     bool Set(const CKeyID &id);
     bool Set(const CScriptID &id);
     bool Set(const CTxDestination &dest);
     bool IsValid() const;
 
-    CApolloncoinAddress() {}
-    CApolloncoinAddress(const CTxDestination &dest) { Set(dest); }
-    CApolloncoinAddress(const std::string& strAddress) { SetString(strAddress); }
-    CApolloncoinAddress(const char* pszAddress) { SetString(pszAddress); }
+    CPleskovcoinAddress() {}
+    CPleskovcoinAddress(const CTxDestination &dest) { Set(dest); }
+    CPleskovcoinAddress(const std::string& strAddress) { SetString(strAddress); }
+    CPleskovcoinAddress(const char* pszAddress) { SetString(pszAddress); }
 
     CTxDestination Get() const;
     bool GetKeyID(CKeyID &keyID) const;
@@ -118,7 +118,7 @@ public:
 /**
  * A base58-encoded secret key
  */
-class CApolloncoinSecret : public CBase58Data
+class CPleskovcoinSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret);
@@ -127,11 +127,11 @@ public:
     bool SetString(const char* pszSecret);
     bool SetString(const std::string& strSecret);
 
-    CApolloncoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
-    CApolloncoinSecret() {}
+    CPleskovcoinSecret(const CKey& vchSecret) { SetKey(vchSecret); }
+    CPleskovcoinSecret() {}
 };
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CApolloncoinExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CPleskovcoinExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -146,15 +146,15 @@ public:
         return ret;
     }
 
-    CApolloncoinExtKeyBase(const K &key) {
+    CPleskovcoinExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CApolloncoinExtKeyBase() {}
+    CPleskovcoinExtKeyBase() {}
 };
 
-typedef CApolloncoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CApolloncoinExtKey;
-typedef CApolloncoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CApolloncoinExtPubKey;
+typedef CPleskovcoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CPleskovcoinExtKey;
+typedef CPleskovcoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CPleskovcoinExtPubKey;
 
 /** base58-encoded Bitcoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).

@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = Apollon-qt
-VERSION = 2.1.0.3
+TARGET = Pleskov-qt
+VERSION = 0.1.0.1
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 QT += network printsupport
 DEFINES += ENABLE_WALLET
@@ -138,10 +138,10 @@ LIBS += $$PWD/src/secp256k1/src/libsecp256k1_la-secp256k1.o
     QMAKE_CLEAN += $$PWD/src/secp256k1/src/libsecp256k1_la-secp256k1.o; cd $$PWD/src/secp256k1; $(MAKE) clean
 } else {
     isEmpty(SECP256K1_LIB_PATH) {
-        win32:SECP256K1_LIB_PATH=C:/source/Apollon/src/secp256k1/.libs
+        win32:SECP256K1_LIB_PATH=C:/source/Pleskov/src/secp256k1/.libs
 		}
     isEmpty(SECP256K1_INCLUDE_PATH) {
-        win32:SECP256K1_INCLUDE_PATH=C:/source/Apollon/src/secp256k1/include
+        win32:SECP256K1_INCLUDE_PATH=C:/source/Pleskov/src/secp256k1/include
     }
 }
 
@@ -587,8 +587,8 @@ macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit -framework CoreServices
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/Apollon.icns
-macx:TARGET = "Apollon-Qt"
+macx:ICON = src/qt/res/icons/Pleskov.icns
+macx:TARGET = "Pleskov-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread

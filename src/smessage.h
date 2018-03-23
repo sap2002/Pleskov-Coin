@@ -166,7 +166,7 @@ public:
 
 
 // -- get at the data
-class CApolloncoinAddress_B : public CApolloncoinAddress
+class CPleskovcoinAddress_B : public CPleskovcoinAddress
 {
 public:
     uint8_t getVersion()

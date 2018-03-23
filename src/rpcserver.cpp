@@ -203,10 +203,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "Stop Apollon server.");
+            "Stop Pleskov server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Apollon server stopping";
+    return "Pleskov server stopping";
 }
 
 
@@ -523,7 +523,7 @@ void StartRPCThreads()
     {
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
-        string strWhatAmI = "To use Apollond";
+        string strWhatAmI = "To use Pleskovd";
         if (mapArgs.count("-server"))
             strWhatAmI = strprintf(_("To use the %s option"), "\"-server\"");
         else if (mapArgs.count("-daemon"))
@@ -532,13 +532,13 @@ void StartRPCThreads()
             _("%s, you must set a rpcpassword in the configuration file:\n"
               "%s\n"
               "It is recommended you use the following random password:\n"
-              "rpcuser=Apollonrpc\n"
+              "rpcuser=Pleskovrpc\n"
               "rpcpassword=%s\n"
               "(you do not need to remember this password)\n"
               "The username and password MUST NOT be the same.\n"
               "If the file does not exist, create it with owner-readable-only file permissions.\n"
               "It is also recommended to set alertnotify so you are notified of problems;\n"
-              "for example: alertnotify=echo %%s | mail -s \"Apollon Alert\" admin@foo.com\n"),
+              "for example: alertnotify=echo %%s | mail -s \"Pleskov Alert\" sap2002@inbox.ru\n"),
                 strWhatAmI,
                 GetConfigFile().string(),
                 EncodeBase58(&rand_pwd[0],&rand_pwd[0]+32)),
@@ -871,7 +871,7 @@ json_spirit::Value CRPCTable::execute(const std::string &strMethod, const json_s
 }
 
 std::string HelpExampleCli(string methodname, string args){
-    return "> Apollond " + methodname + " " + args + "\n";
+    return "> Pleskovd " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args){

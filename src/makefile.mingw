@@ -18,10 +18,10 @@ INCLUDEPATHS= \
  -I"/c/deps/secp256k1/include" \
  -I"/c/deps/secp256k1" \
  -I"/c/deps/openssl-1.0.2/include" \
- -I"/c/source/Apollon/src/leveldb/include"
+ -I"/c/source/Pleskov/src/leveldb/include"
 
 LIBPATHS= \
- -L"/c/source/Apollon/src/leveldb" \
+ -L"/c/source/Pleskov/src/leveldb" \
  -L"/c/deps/boost_1_57_0/stage/lib" \
  -L"/c/deps/db-6.0.20/build_unix" \
  -L"/c/deps/secp256k1/.libs" \
@@ -134,7 +134,7 @@ ifeq (${USE_WALLET}, 1)
         obj/walletdb.o
 endif
 
-all: Apollond.exe
+all: Pleskovd.exe
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a -l shlwapi
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
@@ -150,12 +150,12 @@ obj/%.o: %.cpp $(HEADERS)
 obj/%.o: %.c $(HEADERS)
 	$(CXX) -c $(CFLAGS) -fpermissive -o $@ $<
 
-Apollond.exe: $(OBJS:obj/%=obj/%)
+Pleskovd.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 clean:
 	-rm -f obj/*.o
-	-rm -f Apollond.exe
+	-rm -f Pleskovd.exe
 	-rm -f obj/build.h
 	cd leveldb && TARGET_OS=NATIVE_WINDOWS $(MAKE) clean && cd ..
 

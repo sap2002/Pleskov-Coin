@@ -52,12 +52,12 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Apollon version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Pleskov version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  Apollond [options]                     " + "\n" +
-                  "  Apollond [options] <command> [params]  " + _("Send command to -server or Apollond") + "\n" +
-                  "  Apollond [options] help                " + _("List commands") + "\n" +
-                  "  Apollond [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  Pleskovd [options]                     " + "\n" +
+                  "  Pleskovd [options] <command> [params]  " + _("Send command to -server or Pleskovd") + "\n" +
+                  "  Pleskovd [options] help                " + _("List commands") + "\n" +
+                  "  Pleskovd [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -67,7 +67,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "Apollon:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "Pleskov:"))
                 fCommandLine = true;
 
         if (fCommandLine)
